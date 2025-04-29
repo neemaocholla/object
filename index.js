@@ -75,5 +75,33 @@ let users = [
     new User("Eve", "eve@gmail.com", false)
 ];
 
+users.forEach(user => {
+    user.isActive = Math.random() < 0.5; 
+});
+console.log("Active users:");
+users.forEach(user => {
+    if (user.isActive) {
+        console.log(user.username);
+    }
+});
+
+
+
 // You have an array of destination objects, each with name, distance (in km), and budgetRequired (in dollars). Write a function that accepts a maximum distance and a budget and returns all destinations the user can afford and reach within that distance. If none are found, return "No destinations available under your budget and distance". (5 pts)
+
+function findDestinations(destinations, maxDistance, maxBudget) {
+    let affordableDestinations = destinations.filter(destination => 
+        destination.distance <= maxDistance && destination.budgetRequired <= maxBudget
+    );
+
+    return affordableDestinations.length > 0 ? affordableDestinations : "No destinations available under your budget and distance";
+}
+
+let destinations = [
+    { name: "Diani", distance: 1200, budgetRequired: 305 },
+    { name: "Maasai Mara", distance: 290, budgetRequired: 170 },
+    { name: "Naivasha", distance: 640, budgetRequired: 240 }
+];
+
+console.log(findDestinations(destinations, 250, 16000));
 
