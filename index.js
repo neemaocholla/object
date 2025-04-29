@@ -68,11 +68,11 @@ function User(username, email, isActive) {
     this.isActive = isActive;
 }
 let users = [
-    new User("Alice", "alice@gmail.com", true),
-    new User("Bob", "bob@gmail.com", false),
-    new User("Charlie", "charlie@gmail.com", true),
-    new User("David", "david@gmail.com", true),
-    new User("Eve", "eve@gmail.com", false)
+    new User("Alice45", "alice@gmail.com", true),
+    new User("Bobrisky", "bob@gmail.com", false),
+    new User("CharlieChap", "charlie@gmail.com", true),
+    new User("DavidRud1", "david@gmail.com", true),
+    new User("EveAtome", "eve@gmail.com", false)
 ];
 
 users.forEach(user => {
