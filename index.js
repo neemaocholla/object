@@ -76,7 +76,7 @@ let users = [
 ];
 
 users.forEach(user => {
-    user.isActive = Math.random() < 0.5; 
+    user.isActive = Math.random() < 0.6; 
 });
 console.log("Active users:");
 users.forEach(user => {
